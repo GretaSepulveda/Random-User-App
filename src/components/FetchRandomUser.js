@@ -12,7 +12,7 @@ class FetchRandomUser extends Component {
     const response = await fetch(url);
     const data = await response.json();
     this.setState({ person: data.results[0], loading: false })
-    // console.log(data.results[0]);
+    //console.log(data.results[0]);
   }
 
   render () {
@@ -26,7 +26,7 @@ class FetchRandomUser extends Component {
     return (
     <div>
       <div>
-        <div>Titel: {this.state.person.name.title}</div>
+        <div>title: {this.state.person.name.title}</div>
         <div>First Name: {this.state.person.name.first}</div>
         <div>Last Name: {this.state.person.name.last}</div>
         <div>Picture: </div> <img src={this.state.person.picture.large} />
